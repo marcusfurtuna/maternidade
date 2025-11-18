@@ -1,0 +1,39 @@
+<mat-card>
+  <h2>Cartão da Gestante</h2>
+  <div *ngIf="cartao">
+    <h3>Dados da Mãe</h3>
+    <p>Nome: {{cartao.mae?.nome}}</p>
+    <p>CPF: {{cartao.mae?.cpf}}</p>
+    <p>Contato: {{cartao.mae?.contato}}</p>
+    <p>Endereço: {{cartao.mae?.endereco}}</p>
+    <p>Tipo sanguíneo: {{cartao.mae?.tipoSanguineo}}</p>
+    <h3>Dados da Gestação</h3>
+    <p>DUM: {{cartao.gestacao?.dum}}</p>
+    <p>DPP: {{cartao.gestacao?.dpp}}</p>
+    <p>IG semanas: {{cartao.gestacao?.idadeGestacionalSemanas}}</p>
+    <p>Unidade de saúde: {{cartao.gestacao?.unidadeSaude}}</p>
+    <p>Início pré-natal: {{cartao.gestacao?.inicioPreNatal}}</p>
+    <h3>Risco</h3>
+    <p>Nível: {{cartao.risco?.nivel}}</p>
+    <p>Descrição: {{cartao.risco?.descricao}}</p>
+    <h3>Consultas</h3>
+    <mat-list>
+      <mat-list-item *ngFor="let c of cartao.consultas">{{c.data}} - PA: {{c.pa}} - Peso: {{c.peso}}</mat-list-item>
+    </mat-list>
+    <h3>Exames</h3>
+    <mat-list>
+      <mat-list-item *ngFor="let e of cartao.exames">{{e.data}} - {{e.tipo}} - {{e.resultadoResumo}}</mat-list-item>
+    </mat-list>
+    <h3>Vacinação</h3>
+    <mat-list>
+      <mat-list-item *ngFor="let v of cartao.vacinacoes">{{v.data}} - {{v.vacina}} ({{v.dose}})</mat-list-item>
+    </mat-list>
+    <h3>Dados do Bebê</h3>
+    <div *ngIf="cartao.bebe">
+      <p>Nome: {{cartao.bebe?.nome}}</p>
+      <p>Sexo: {{cartao.bebe?.sexo}}</p>
+      <p>Data de nascimento: {{cartao.bebe?.dataNascimento}}</p>
+      <p>Peso nascimento: {{cartao.bebe?.pesoNascimento}}</p>
+    </div>
+  </div>
+</mat-card>

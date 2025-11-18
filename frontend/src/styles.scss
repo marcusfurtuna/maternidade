@@ -1,0 +1,23 @@
+@use '@angular/material' as mat;
+
+$primary: mat.define-palette(mat.$teal-palette, 500);
+$secondary: mat.define-palette(mat.$deep-purple-palette, 300);
+$tertiary: mat.define-palette(mat.$pink-palette, 200);
+$warn: mat.define-palette(mat.$red-palette);
+
+$theme: mat.define-light-theme((
+  color: (
+    primary: $primary,
+    secondary: $secondary,
+    tertiary: $tertiary,
+    warn: $warn,
+  ),
+  density: 0,
+  typography: mat.define-typography-config()
+));
+
+@include mat.core();
+@include mat.all-component-themes($theme);
+
+body { background-color: #F7FAFB; }
+.mat-card { border-radius: 12px; }

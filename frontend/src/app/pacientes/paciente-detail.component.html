@@ -1,0 +1,18 @@
+<mat-card>
+  <h2>Detalhes do Paciente</h2>
+  <div *ngIf="paciente">
+    <p>Nome: {{paciente.nome}}</p>
+    <p>CPF: {{paciente.cpf}}</p>
+    <p>Email: {{paciente.email}}</p>
+    <a mat-raised-button color="primary" *ngIf="canEdit" [routerLink]="['/pacientes', paciente.id, 'editar']">Editar</a>
+    <button mat-raised-button color="warn" *ngIf="canEdit" (click)="remover()">Excluir</button>
+    <div>
+      <h3>Gestações</h3>
+      <mat-list>
+        <mat-list-item *ngFor="let g of gestacoes">
+          ID {{g.id}} - Status: {{g.status}} - <a [routerLink]="['/gestacoes', g.id, 'cartao']">Cartão</a>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</mat-card>

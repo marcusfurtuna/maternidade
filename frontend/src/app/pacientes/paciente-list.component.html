@@ -1,0 +1,24 @@
+<mat-card>
+  <h2>Pacientes</h2>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Buscar</mat-label>
+      <input matInput [(ngModel)]="q" placeholder="Buscar">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="load()">Buscar</button>
+    <button mat-raised-button color="accent" *ngIf="canEdit" (click)="exportCsv()">Exportar CSV</button>
+    <a mat-raised-button color="primary" *ngIf="canEdit" routerLink="/pacientes/novo">Novo</a>
+  </div>
+  <mat-list>
+    <mat-list-item *ngFor="let p of pacientes">
+      <a [routerLink]="['/pacientes', p.id]">{{p.nome}}</a>
+      <span class="spacer"></span>
+      <a mat-button color="primary" *ngIf="canEdit" [routerLink]="['/pacientes', p.id, 'editar']">Editar</a>
+      <button mat-button color="warn" *ngIf="canEdit" (click)="remover(p)">Excluir</button>
+    </mat-list-item>
+  </mat-list>
+  <div>
+    <button mat-button [disabled]="page===0" (click)="prev()">Anterior</button>
+    <button mat-button (click)="next()">Próximo</button>
+  </div>
+</mat-card>
