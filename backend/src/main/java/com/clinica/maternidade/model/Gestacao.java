@@ -42,4 +42,12 @@ public class Gestacao {
   public void setAbortos(Integer abortos) { this.abortos = abortos; }
   public String getStatus() { return status; }
   public void setStatus(String status) { this.status = status; }
+  public String getRiscoNivel() { return riscoNivel; }
+  public void setRiscoNivel(String riscoNivel) { this.riscoNivel = riscoNivel; }
+  public String getRiscoDescricao() { return riscoDescricao; }
+  public void setRiscoDescricao(String riscoDescricao) { this.riscoDescricao = riscoDescricao; }
+  public String getUnidadeSaude() { return unidadeSaude; }
+  public void setUnidadeSaude(String unidadeSaude) { this.unidadeSaude = unidadeSaude; }
+  public LocalDate getInicioPreNatal() { return inicioPreNatal; }
+  public void setInicioPreNatal(LocalDate inicioPreNatal) { this.inicioPreNatal = inicioPreNatal; }
 }
