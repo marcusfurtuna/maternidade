@@ -1,7 +1,8 @@
-package com.clinica.maternidade.auth;
+package com.clinica.maternidade.controller;
 
 import com.clinica.maternidade.security.JwtService;
-import com.clinica.maternidade.usuario.UsuarioRepository;
+import com.clinica.maternidade.repository.UsuarioRepository;
+import com.clinica.maternidade.model.Usuario;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import java.util.stream.Collectors;

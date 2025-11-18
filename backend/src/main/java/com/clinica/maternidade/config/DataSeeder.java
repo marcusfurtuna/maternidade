@@ -1,8 +1,8 @@
 package com.clinica.maternidade.config;
 
-import com.clinica.maternidade.usuario.Perfil;
-import com.clinica.maternidade.usuario.Usuario;
-import com.clinica.maternidade.usuario.UsuarioRepository;
+import com.clinica.maternidade.model.Perfil;
+import com.clinica.maternidade.model.Usuario;
+import com.clinica.maternidade.repository.UsuarioRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

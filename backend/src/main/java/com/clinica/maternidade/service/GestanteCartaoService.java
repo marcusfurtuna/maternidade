@@ -1,12 +1,13 @@
-package com.clinica.maternidade.gestacao;
+package com.clinica.maternidade.service;
 
 import com.clinica.maternidade.dto.GestanteCartaoDTO;
-import com.clinica.maternidade.paciente.Paciente;
-import com.clinica.maternidade.paciente.PacienteRepository;
-import com.clinica.maternidade.consulta.ConsultaPreNatalRepository;
-import com.clinica.maternidade.exame.ExameRepository;
-import com.clinica.maternidade.vacina.VacinacaoRepository;
-import com.clinica.maternidade.bebe.BebeRepository;
+import com.clinica.maternidade.model.Paciente;
+import com.clinica.maternidade.repository.PacienteRepository;
+import com.clinica.maternidade.repository.ConsultaPreNatalRepository;
+import com.clinica.maternidade.repository.ExameRepository;
+import com.clinica.maternidade.repository.VacinacaoRepository;
+import com.clinica.maternidade.repository.BebeRepository;
+import com.clinica.maternidade.repository.GestacaoRepository;
 import org.springframework.stereotype.Service;
 import java.util.stream.Collectors;
 

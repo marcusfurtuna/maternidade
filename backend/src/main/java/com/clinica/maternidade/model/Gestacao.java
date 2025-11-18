@@ -1,6 +1,6 @@
-package com.clinica.maternidade.gestacao;
+package com.clinica.maternidade.model;
 
-import com.clinica.maternidade.paciente.Paciente;
+import com.clinica.maternidade.model.Paciente;
 import jakarta.persistence.*;
 import java.time.LocalDate;
 

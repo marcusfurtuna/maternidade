@@ -1,6 +1,6 @@
 package com.clinica.maternidade.security;
 
-import com.clinica.maternidade.usuario.UsuarioRepository;
+import com.clinica.maternidade.repository.UsuarioRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

@@ -1,4 +1,4 @@
-package com.clinica.maternidade.usuario;
+package com.clinica.maternidade.model;
 
 import jakarta.persistence.*;
 import java.util.Set;

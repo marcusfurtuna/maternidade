@@ -1,4 +1,4 @@
-package com.clinica.maternidade.paciente;
+package com.clinica.maternidade.controller;
 
 import com.clinica.maternidade.dto.PacienteDTO;
 import org.springframework.web.bind.annotation.*;
@@ -7,6 +7,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.security.access.prepost.PreAuthorize;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import com.clinica.maternidade.service.PacienteService;
 
 @RestController
 @RequestMapping("/api/pacientes")

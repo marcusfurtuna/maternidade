@@ -1,9 +1,11 @@
-package com.clinica.maternidade.exame;
+package com.clinica.maternidade.controller;
 
-import com.clinica.maternidade.gestacao.GestacaoRepository;
+import com.clinica.maternidade.repository.GestacaoRepository;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import com.clinica.maternidade.repository.ExameRepository;
+import com.clinica.maternidade.model.Exame;
 
 @RestController
 @RequestMapping("/api/gestacoes/{gestacaoId}/exames")

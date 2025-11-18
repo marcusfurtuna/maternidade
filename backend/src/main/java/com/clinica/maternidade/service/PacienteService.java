@@ -1,10 +1,12 @@
-package com.clinica.maternidade.paciente;
+package com.clinica.maternidade.service;
 
 import com.clinica.maternidade.dto.PacienteDTO;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import com.clinica.maternidade.repository.PacienteRepository;
+import com.clinica.maternidade.model.Paciente;
 
 @Service
 public class PacienteService {

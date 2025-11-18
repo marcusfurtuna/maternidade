@@ -1,8 +1,9 @@
-package com.clinica.maternidade.gestacao;
+package com.clinica.maternidade.controller;
 
 import com.clinica.maternidade.dto.GestanteCartaoDTO;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import com.clinica.maternidade.service.GestanteCartaoService;
 
 @RestController
 @RequestMapping("/api/gestacoes/{gestacaoId}/cartao")
